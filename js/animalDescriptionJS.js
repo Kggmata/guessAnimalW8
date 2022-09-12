@@ -14,7 +14,7 @@ let searchHistory = {};
 let searchHistoryNum = 10;
 let galleryHistory = {};
 let galleryHistoryNum = 10;
-let chocapi = Chocolat(document.querySelectorAll('.chocolat-image')).api;
+// let chocapi = Chocolat(document.querySelectorAll('.chocolat-image')).api;
 // adjust style
 $('#reloadRecords').click(function () {
     let classItem = $('#filterSelectionClass>option:selected').text();
