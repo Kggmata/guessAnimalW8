@@ -1,0 +1,116 @@
+{
+  "Class": [
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Actinopterygii",
+      "ClassCommonName": "ray-finned fishes",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=actinopterygii"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Amphibia",
+      "ClassCommonName": "amphibians",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=amphibia"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Arachnida",
+      "ClassCommonName": "arachnids",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=arachnida"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Aves",
+      "ClassCommonName": "birds",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=aves"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Bivalvia",
+      "ClassCommonName": "bivalves",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=bivalvia"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Branchiopoda",
+      "ClassCommonName": "branchiopods",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=branchiopoda"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Cephalaspidomorphi",
+      "ClassCommonName": "lampreys",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=cephalaspidomorphi"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Chondrichthyes",
+      "ClassCommonName": "cartilaginous fishes",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=chondrichthyes"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Gastropoda",
+      "ClassCommonName": "snails",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=gastropoda"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Incertae sedis",
+      "ClassCommonName": "uncertain",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=incertae+sedis"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Insecta",
+      "ClassCommonName": "insects",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=insecta"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Malacostraca",
+      "ClassCommonName": "malacostracans",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=malacostraca"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Mammalia",
+      "ClassCommonName": "mammals",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=mammalia"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Maxillopoda",
+      "ClassCommonName": "maxillopods",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=maxillopoda"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Reptilia",
+      "ClassCommonName": "reptiles",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=reptilia"
+    },
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassName": "Sarcopterygii",
+      "ClassCommonName": "lobe-finned fishes",
+      "FamilyNamesUrl": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames&kingdom=animals&class=sarcopterygii"
+    }
+  ]
+}

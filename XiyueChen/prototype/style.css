@@ -1,0 +1,54 @@
+/*  General  */
+
+body {
+	margin: 3em;
+	font-size: 18px;
+	background-color: rgb(116, 241, 104);
+	font-family: 'Signika Negative', sans-serif;
+}
+
+
+header, nav, footer {
+	background: rgb(234, 242, 4);
+	color:rgb(7, 106, 37);
+	padding: 1em 2em;
+	border-radius: 10px;
+	margin-top: 1em;
+	text-align: center;
+	font-family: 'Rubik Iso', cursive;
+	font-size: 20px
+}
+
+main{
+	display: flex;
+	flex-direction:initials;
+	justify-content:first baseline;
+	align-items:center;
+
+}
+
+
+
+/* Table */
+
+
+
+table, tr, td {
+    border: 1px solid rgb(61, 223, 101);
+	width: 60%;
+	height: 60px;
+	background-color: yellow;
+	font-family: 'Rubik Dirt', cursive;
+	text-align: center;
+	color:green;
+}
+
+table {
+    border-collapse:inherit;
+    border-spacing: 5px;
+	padding: 15px;
+	flex-grow: 1;
+}
+
+
+

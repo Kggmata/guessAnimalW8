@@ -1,0 +1,20 @@
+{
+  "ServiceDescription": "This API accesses QLD Government wildlife data that has been approved for public release.  There are a number of functions that retrieve species profiles, notes, statuses, images and locations.",
+  "Functions": [
+    {
+      "Name": "Get Kingdom Names",
+      "Description": "Lists all of the kingdom names.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getkingdomnames",
+      "MandatoryVariables": [],
+      "OptionalVariables": [
+        "f"
+      ]
+    }
+  ],
+  "Varaibles": [
+    {
+      "Name": "f",
+      "Description": "Format - Setting the 'f' varaible will determine the format of the response.  There are 4 possible options; json, xml, kml and csv.  Json is the default if 'f' is not set.  If the output is spatial, GeoJson will be return for 'f=json' and KML will be returned for 'f=xml' or 'f=kml'."
+    }
+  ]
+}

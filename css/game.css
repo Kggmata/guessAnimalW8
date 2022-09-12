@@ -1,0 +1,114 @@
+
+
+#game-window {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+#game-table {
+    padding: 1em 1em;
+    font-size: 24px;
+}
+
+#animal-picture {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/* https://codepen.io/wteja/pen/wYaqdw/ */
+#animal-cover {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    border: solid 400px rgba(52, 83, 255, 0.9);
+    border-radius: 50%;
+}
+
+#animal-info {
+    padding: 2em 2em;
+    border: solid 4px #008CBA;
+    border-radius: 40px;
+}
+#answer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#answer {
+    text-align: center;
+    font-size: 32px;
+}
+
+#animal-names {
+    border: dotted 4px #ecad00;
+    border-radius: 10px;
+    width: 30%;
+
+}
+
+.button {
+    background-color: #008CBA;
+    border: 4px solid transparent;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    margin: 5px 2px;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.green-button {
+    background-color: #4CAF50;
+}
+
+.red-button {
+    border: solid 4px  #f44336;
+    background-color: transparent;
+}
+
+.yellow-button {
+    background-color: #ecad00;
+    border-radius: 50%;
+}
+
+.button:hover{
+    border: 4px solid black;
+}
+
+.red-button:hover {
+    border: solid 4px  #f44336;
+    background-color: #f44336;
+}
+
+.name-lable{
+    background-color: #ffffff;
+    border: 4px dashed black;
+    color: black;
+}
+
+.name-lable:focus{
+    background-color: #32f763;
+    border-style: solid;
+}
+
+

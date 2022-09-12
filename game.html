@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>DECO7180 WebSite | Game</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&display=swap"
+              rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link rel="stylesheet" href="css/game.css">
+    </head>
+
+    <body>
+        <header>
+            <div id="banner">
+                <img id="logo" src="imgs\logo.png" alt="LOGO">
+                <h1>GuessWhoAmI</h1>
+            </div>
+
+            <nav>
+                <ul>
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="game.html">
+                        <li>Game </li>
+                    </a>
+                    <a href="ranks-prizes.html">
+                        <li>Ranks & Prizes</li>
+                    </a>
+                    <a href="explore.html">
+                        <li>Explore</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div id="game-window">
+                <div id="animal-picture">
+                    <div id="animal-cover"></div>
+                </div>
+                <div id="animal-info"></div>
+            </div>
+
+            <div id="game-table">
+                <br>
+                <p>Whois it? Guess it!</p>
+                <br>
+                <div id="answer-row">
+                    <div id="animal-names"> </div>
+                    <button class="button green-button" type="button" onclick="guess()">
+                        GUESS
+                    </button>
+                    <button class="button yellow-button" type="button" onclick="getTips()">
+                        TIPS
+                    </button>
+                    <div id="tips"></div>
+                </div>
+                <br><br>
+                <div id="answer"></div>
+                <br><br>
+                <div id="another-row">
+                    <button class="button" type="button" onclick="changeAnother()">ANOTHER</button>
+                    <button class="button" type="button">MORE</button>
+                    <button class="button red-button" type="button" onclick="showAnswer()">
+                        SEE ANSWER
+                    </button>
+                </div>
+
+
+            </div>
+        </main>
+
+        <footer>
+            <section>
+                <p> Follow Us </p>
+            </section>
+
+            <section>
+                <p>Policies</p>
+            </section>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="js/game.js"></script>
+    </body>
+
+</html>

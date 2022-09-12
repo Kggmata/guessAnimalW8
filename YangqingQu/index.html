@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--title of the website-->
+    <title> Animal Description</title>
+    <!--style sheet link to css file -->
+    <link rel="stylesheet" href="css/animalDescriptionCss.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+          integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+          crossorigin=""/>
+    <link rel="stylesheet" href="css/chocolat.css">
+</head>
+<body>
+<!--    loading animation-->
+<div id="loading"></div>
+<!--title-->
+<h1 id="animalName">
+    Animal Name
+</h1>
+<!--    animal description-->
+<div id="animalDescription">
+    <!--    search textbox-->
+    <form id="filter">
+        <div id="filterBox">
+            <input id="filter-text" type="text" placeholder="Filter by Text" value="">
+            <a href="#" class="record-link">Load related images</a>
+        </div>
+        <em>(Case-sensitive)</em>
+        <p id="filter-count"><strong>0</strong> records displayed.</p>
+        <!--        $('<a>').attr("href", "#").addClass("record-link").text("Load related images").data('searchItem', name),-->
+
+    </form>
+    <ul id="gallery" class="scrollable">
+        <p>
+            Gallery Images
+        </p>
+    </ul>
+    <hr>
+    <!--    dataset api-->
+    <div id="textDescription&Map">
+        <section id="textDescription">
+            <!--    record boxes-->
+            <h1>Records from wild animal API</h1>
+        </section>
+        <div id="map">
+            <div>Animal Distribution Map</div>
+        </div>
+    </div>
+</div>
+
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/chocolat.js"></script>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+<script src="js/animalDescriptionJS.js"></script>
+
+</body>
+</html>

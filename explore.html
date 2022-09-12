@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--title of the website-->
+    <title>DECO7180 WebSite | Explore</title>
+    <!--style sheet link to css file -->
+    <link rel="stylesheet" href="css/explore.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+          integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+          crossorigin=""/>
+    <link rel="stylesheet" href="css/chocolat.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@600&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+
+<body>
+<header>
+    <div id="banner">
+        <img id="logo" src="imgs\logo.png" alt="LOGO">
+        <h1>Guess Who Am I</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
+            <a href="game.html">
+                <li>Game</li>
+            </a>
+            <a href="ranks-prizes.html">
+                <li>Ranks & Prizes</li>
+            </a>
+            <a href="explore.html">
+                <li>Explore</li>
+            </a>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <body>
+    <!--    loading animation-->
+    <div id="loading"></div>
+    <!--title-->
+    <div id="animalHeader">
+        <h1 id="animalName">
+            Animal Name
+        </h1>
+    </div>
+    <a class="chocolat-image" href="imgs/1.jpg" data-srcset="">
+        <img src="imgs/1.jpg">
+    </a>
+    <!--    animal description-->
+    <div id="animalDescription">
+        <!--    search textbox-->
+        <form id="filter">
+            <div id="filterBox">
+                <input id="filter-text" type="text" placeholder="Filter by Text" value="">
+                <div id="dropDown"></div>
+                <div id="dropDownHistory"></div>
+                <div id="galleryHistory"></div>
+            </div>
+            <p id="searchBoxFilter-count">
+                <strong id="searchBoxRecordsDisplayed">0</strong> results shown.
+            </p>
+            <div id="selectionContainer">
+                <div id="filterSelectionClassContainer">
+                    <p>Class:</p>
+                    <select id="filterSelectionClass">
+                    </select>
+                    <p id="classSelectionCount">0 records</p>
+                </div>
+                <div id="filterSelectionFamilyContainer">
+                    <p>Family:</p>
+                    <select id="filterSelectionFamily">
+                    </select>
+                    <p id="familySelectionCount">0 records</p>
+                </div>
+                <div id="filterSelectionAnimalContainer">
+                    <p>Animal:</p>
+                    <select id="filterSelectionAnimal">
+                    </select>
+                    <p id="animalSelectionCount">0 records</p>
+                </div>
+                <button type="button" id="reloadAnimal">Reload Random Animal</button>
+                <button type="button" id="reloadRecords">reload Random Records</button>
+            </div>
+        </form>
+        <ul id="gallery" class="scrollable">
+            <p>
+                Gallery Images
+            </p>
+        </ul>
+        <div id="description">
+            <h1>
+                Description
+            </h1>
+        </div>
+        <!--    dataset api-->
+        <div id="textDescription&Map">
+            <section id="textDescription">
+                <div id="textDescriptionHeader">
+                    <h1>Records from wild animal API</h1>
+                    <p id="filter-count">
+                        <strong id="recordsDisplayed">0</strong> records displayed.
+                        <strong id="recordsTotal">0</strong> total records.
+                    </p>
+                </div>
+
+                <!--    record boxes-->
+            </section>
+
+            <div id="mapContainer">
+                <div id="map">
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</main>
+
+<footer>
+    <section>
+        <p> Follow Us </p>
+    </section>
+
+    <section>
+        <p>Policies</p>
+    </section>
+</footer>
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/chocolat.js"></script>
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
+<script src="js/animalDescriptionJS.js"></script>
+
+</body>
+
+</html>

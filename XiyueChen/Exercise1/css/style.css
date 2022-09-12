@@ -1,0 +1,20 @@
+.record {
+	border: 2px solid orange;
+	padding: 1em;
+	margin-top: 1em;
+}
+
+#loading {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: white url(../images/loading.gif) center center no-repeat;
+	top: 0;
+	left: 0;
+	transition: all 0.5s ease;
+}
+
+body.loaded #loading {
+	opacity: 0;
+	visibility: hidden;
+}

@@ -1,0 +1,39 @@
+{
+  "Kingdom": [
+    {
+      "KingdomName": "Animalia",
+      "KingdomCommonName": "animals",
+      "ClassNamesUrl": "http://apps.des.qld.gov.au/species/?op=getclassnames&kingdom=animals"
+    },
+    {
+      "KingdomName": "Chromista",
+      "KingdomCommonName": "chromists",
+      "ClassNamesUrl": "http://apps.des.qld.gov.au/species/?op=getclassnames&kingdom=chromists"
+    },
+    {
+      "KingdomName": "Eubacteria",
+      "KingdomCommonName": "bacteria",
+      "ClassNamesUrl": "http://apps.des.qld.gov.au/species/?op=getclassnames&kingdom=bacteria"
+    },
+    {
+      "KingdomName": "Fungi",
+      "KingdomCommonName": "fungi",
+      "ClassNamesUrl": "http://apps.des.qld.gov.au/species/?op=getclassnames&kingdom=fungi"
+    },
+    {
+      "KingdomName": "Plantae",
+      "KingdomCommonName": "plants",
+      "ClassNamesUrl": "http://apps.des.qld.gov.au/species/?op=getclassnames&kingdom=plants"
+    },
+    {
+      "KingdomName": "Protista",
+      "KingdomCommonName": "protists",
+      "ClassNamesUrl": "http://apps.des.qld.gov.au/species/?op=getclassnames&kingdom=protists"
+    },
+    {
+      "KingdomName": "Protozoa",
+      "KingdomCommonName": "protozoans",
+      "ClassNamesUrl": "http://apps.des.qld.gov.au/species/?op=getclassnames&kingdom=protozoans"
+    }
+  ]
+}

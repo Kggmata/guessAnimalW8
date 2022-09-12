@@ -1,0 +1,544 @@
+:root {
+    background-color: #2cb63f;
+    --fontColor: black;
+    --hoverColor: var(--borderColor);
+    --backgroundHover: #d5ffe6;
+    --borderColor: #43b5fd;
+    --blur-filter: blur(5px);
+    --transformYDistance: translateY(-10%);
+    --hoverFontColor: darkgreen;
+}
+
+/*loading*/
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white url(../imgs/loading.gif) center center no-repeat;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+body.loaded #loading {
+    opacity: 0;
+    visibility: hidden;
+}
+
+h1 {
+    color: var(--fontColor);
+    transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+    color: var(--hoverFontColor);
+}
+
+h1:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+h1:hover:after {
+    background: var(--hoverFontColor);
+    width: 100%;
+}
+
+button {
+    border: none;
+    position: relative;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-top: 1em;
+    padding: 1em 2em;
+    color: white;
+    background-color: #79f26d;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: grey;
+}
+
+button:active {
+    background: black;
+}
+
+#animalHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+#animalDescription {
+    /*flexbox*/
+    display: flex;
+    flex-direction: column;
+}
+
+#filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 1em;
+}
+
+#filterBox {
+    display: flex;
+    flex-direction: column;
+}
+
+#filter-text {
+    height: 30px;
+    border-radius: 5px;
+    border-color: var(--hoverColor);
+    transition: 0.3s ease;
+}
+
+#filter-text:hover {
+    border: 2px solid var(--hoverColor);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .5);
+}
+
+#searchBoxFilter-count:hover {
+    color: var(--hoverFontColor);
+}
+
+#searchBoxFilter-count:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+#searchBoxFilter-count:hover:after {
+    background: var(--hoverFontColor);
+    width: 100%;
+}
+
+#dropDown {
+    position: absolute;
+    top: 345px;
+    left: 10%;
+    z-index: 9999;
+}
+
+#dropDown > div {
+    width: 220px;
+    opacity: 0;
+    backdrop-filter: var(--blur-filter);
+    transition: 0.3s ease;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    border: 2px solid var(--hoverColor);
+}
+
+#dropDown > div :hover {
+    background-color: rgba(217, 255, 213, 0.5);
+}
+
+#dropDown > div:active {
+    background-color: rgba(156, 184, 153, 0.5);
+    box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, .5);
+}
+
+#dropDown > div > a {
+    margin-top: 0;
+    width: 150px;
+    height: 15px;
+}
+
+#dropDownHistory {
+    position: absolute;
+    top: 345px;
+    margin-left: 230px;
+    z-index: 9999;
+}
+
+#dropDownHistory > div {
+    opacity: 0;
+    backdrop-filter: var(--blur-filter);
+    transition: 0.3s ease;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    border: 2px solid var(--hoverColor);
+}
+
+#dropDownHistory > div:hover {
+    background-color: #d9ffd5;
+}
+
+#dropDownHistory > div:active {
+    background-color: #9cb799;
+}
+
+#galleryHistory {
+    position: absolute;
+    top: 345px;
+    margin-left: 390px;
+    z-index: 9999;
+}
+
+#galleryHistory > div {
+    opacity: 0;
+    backdrop-filter: var(--blur-filter);
+    transition: 0.3s ease;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    border: 2px solid var(--hoverColor);
+}
+
+#galleryHistory > div:hover {
+    background-color: #d9ffd5;
+}
+
+#galleryHistory > div:active {
+    background-color: #9cb799;
+}
+
+#filter-count:hover {
+    color: var(--hoverFontColor);
+}
+
+#filter-count:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+#filter-count:hover:after {
+    background: var(--hoverFontColor);
+    width: 100%;
+}
+
+select {
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    background-color: lightgreen;
+}
+
+#selectionContainer {
+    width: 650px;
+    z-index: 9999;
+    position: fixed;
+    right: -665px;
+    border: 2px solid var(--hoverColor);
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    backdrop-filter: var(--blur-filter);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+#selectionContainer:hover {
+    right: 0;
+    transition: all 0.5s ease;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    /*transform: translateX(0);*/
+}
+
+#selectionContainer:not(hover) {
+    transition: all 0.5s ease;
+}
+
+#reloadAnimal {
+    margin: 1em;
+}
+
+#reloadRecords {
+    margin: 1em;
+}
+
+#selectionContainer > div > p:hover {
+    color: var(--hoverFontColor);
+}
+
+#selectionContainer > div > p:after {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+#selectionContainer > div > p:hover:after {
+    background: var(--hoverFontColor);
+    width: 100%;
+}
+
+#filterSelectionClassContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#filterSelectionFamilyContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#filterSelectionAnimalContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#gallery {
+    /*background: linear-gradient(#81964e,#697e3f);*/
+    display: flex;
+    float: left;
+    overflow: auto;
+    /*border*/
+    transition: 0.3s ease;
+}
+
+#gallery:hover {
+    background-color: var(--backgroundHover);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .5);
+}
+
+#gallery::-webkit-scrollbar {
+    height: 12px;
+    opacity: 0.5;
+    border: 2px ridge var(--borderColor);
+    transition: all 0.3s ease;
+}
+
+#gallery::-webkit-scrollbar-thumb {
+    border: 2px solid var(--borderColor);
+    background: #81964e;
+    transition: background-color 0.3s ease;
+}
+
+#gallery::-webkit-scrollbar-thumb:hover {
+    background: #647a3d;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+#gallery::-webkit-scrollbar-thumb:active {
+    background: #506633;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+#gallery > a {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6%;
+    transition: 0.3s ease;
+    margin-right: 2%;
+    height: 100%;
+}
+
+#gallery > a:link {
+    text-decoration: none;
+}
+
+.gallery-item:hover {
+    transition: all 0.3s ease;
+    transform: var(--transformYDistance);
+    /*box-shadow: 0 5px 5px rgba(0, 0, 0, .5);*/
+}
+
+.gallery-item:not(hover) {
+    transition: all 0.3s ease;
+    /*box-shadow: 0 5px 5px rgba(0, 0, 0, .5);*/
+}
+
+.gallery-item > p {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    opacity: 0;
+    top: -30px;
+}
+
+.gallery-item > img {
+    /*size*/
+    size: auto;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+    /*margin*/
+    transition: all 0.3s ease;
+}
+
+#description {
+    /*border: 2px solid var(--borderColor);*/
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 1em;
+    transition: 0.3s ease;
+}
+
+#description:hover {
+    background-color: var(--backgroundHover);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+#textDescription\&Map {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#textDescription {
+    /*border: 2px solid var(--borderColor);*/
+    color: var(--fontColor);
+    transition: 0.3s ease;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+#textDescription:hover {
+    background-color: #d9ffd5;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+#textDescriptionHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 1em;
+}
+
+.record {
+    flex-direction: row;
+    justify-content: center;
+    width: 25%;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    margin: 2em;
+    padding: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .75);
+    border: 2px solid orange;
+}
+
+.record:hover {
+    transition: all 0.3s ease;
+    transform: var(--transformYDistance);
+    background-color: #d5ffe6;
+    /*box-shadow: 0 5px 5px rgba(0, 0, 0, .75);*/
+}
+
+
+.record:active {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .75);
+    border: 2px solid orange;
+}
+
+.record > p {
+    opacity: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 20px;
+}
+
+.record > p:hover {
+    backdrop-filter: var(--blur-filter);
+    opacity: 100;
+}
+
+.record-text > h1 {
+    /*opacity: 0;*/
+}
+
+.record-image {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.record-image:hover {
+    transition: all 0.3s ease;
+    border: 2px solid var(--borderColor);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.record-image > a {
+    width: 33%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.record-image > a :hover {
+    transform: scale(5);
+    border: 0.5px solid var(--borderColor);
+    transition: all 0.3s ease;
+}
+
+.record-image > a :not(hover) {
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.record-image > a > img {
+    z-index: 2;
+    width: 50%;
+}
+
+.record-image > a > img :hover {
+    z-index: 999;
+}
+
+#mapContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+#map {
+    /*size of the map*/
+    height: 500px;
+    width: 95%;
+    text-align: center;
+    /*position of the map*/
+    padding-top: 100px;
+    /*border*/
+    border-radius: 10px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+
+#map:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .5);
+}
+
+/* Language: css */

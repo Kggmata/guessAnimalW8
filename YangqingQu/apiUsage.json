@@ -1,0 +1,291 @@
+{
+  "ServiceDescription": "This API accesses QLD Government wildlife data that has been approved for public release.  There are a number of functions that retrieve species profiles, notes, statuses, images and locations.",
+  "Functions": [
+    {
+      "Name": "Get Kingdom Names",
+      "Description": "Lists all of the kingdom names.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getkingdomnames",
+      "MandatoryVariables": [],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Get Class Names",
+      "Description": "Lists all of the class names within a specified kingdom.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getclassnames",
+      "MandatoryVariables": [
+        "kingdom"
+      ],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Get Family Names",
+      "Description": "Lists all of the class names within a specified class.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getfamilynames",
+      "MandatoryVariables": [
+        "kingdom",
+        "class"
+      ],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Get Species",
+      "Description": "Lists all of the species within a specified family.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getspecies",
+      "MandatoryVariables": [
+        "family"
+      ],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Get Species By Id",
+      "Description": "Returns the species profile and notes for the specified taxon id ('taxonid').  Urls to images and maps are returned if they exist.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getspeciesbyid",
+      "MandatoryVariables": [
+        "taxonid"
+      ],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Species Search",
+      "Description": "Searches for species names by matching scientific and all recorded common names.  The search returns a match if the search string is found or if it sounds like a species name.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=speciessearch",
+      "MandatoryVariables": [
+        "kingdom",
+        "species"
+      ],
+      "OptionalVariables": [
+        "f",
+        "class",
+        "family"
+      ]
+    },
+    {
+      "Name": "Get Organisations",
+      "Description": "Lists the organisation names (and associated ids) who have contributed data.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getorganisations",
+      "MandatoryVariables": [],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Get Projects",
+      "Description": "Lists the project names (and associated ids) that the data has been collected under.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getprojects",
+      "MandatoryVariables": [],
+      "OptionalVariables": [
+        "f",
+        "org",
+        "bbox",
+        "circle"
+      ]
+    },
+    {
+      "Name": "Get Projects By Id",
+      "Description": "Lists a subset of the project names (and associated ids) that correspond to the project ids input.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getprojectsbyid",
+      "MandatoryVariables": [
+        "projids"
+      ],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Get Projects Metadata By Id",
+      "Description": "Lists a subset of the project metadata that correspond to the project ids input.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getprojectsmetadatabyid",
+      "MandatoryVariables": [
+        "projids"
+      ],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Project Search",
+      "Description": "Returns a list of projects that match (full or partial) the search string as specified by 'projtitle'.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=projectsearch",
+      "MandatoryVariables": [
+        "projtitle"
+      ],
+      "OptionalVariables": [
+        "f",
+        "org"
+      ]
+    },
+    {
+      "Name": "Get Sites",
+      "Description": "Lists the site locations associated with a projects or projects as specified by 'projids'.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getsites",
+      "MandatoryVariables": [
+        "projids"
+      ],
+      "OptionalVariables": [
+        "f",
+        "proj",
+        "pagecount",
+        "pageindex",
+        "bbox",
+        "circle"
+      ]
+    },
+    {
+      "Name": "Get Surveys",
+      "Description": "Lists the surveys and their locations associated with a projects or projects as specified by 'projids'.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getsurveys",
+      "MandatoryVariables": [
+        "projids"
+      ],
+      "OptionalVariables": [
+        "f",
+        "proj",
+        "p",
+        "min",
+        "max",
+        "pagecount",
+        "pageindex",
+        "bbox",
+        "circle"
+      ]
+    },
+    {
+      "Name": "Get Surveys By Species",
+      "Description": "Lists the surveys and their locations associated with a species (scientific name) as specified by 'species'.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getsurveysbyspecies",
+      "MandatoryVariables": [
+        "species"
+      ],
+      "OptionalVariables": [
+        "f",
+        "p",
+        "min",
+        "max",
+        "proj",
+        "pagecount",
+        "pageindex",
+        "bbox",
+        "circle"
+      ]
+    },
+    {
+      "Name": "Get Species List",
+      "Description": "Lists all unique species found within a defined area.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getspecieslist",
+      "MandatoryVariables": [
+        "kingdom"
+      ],
+      "OptionalVariables": [
+        "f",
+        "min",
+        "max",
+        "pagecount",
+        "pageindex",
+        "bbox",
+        "circle"
+      ]
+    },
+    {
+      "Name": "Get EPBC Statuses",
+      "Description": "Lists all EPBC status codes and descriptions.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getepbcstatuses",
+      "MandatoryVariables": [],
+      "OptionalVariables": [
+        "f"
+      ]
+    },
+    {
+      "Name": "Get NCA Statuses",
+      "Description": "Lists all NCA status codes and descriptions.",
+      "FunctionEndpoint": "http:\/\/apps.des.qld.gov.au\/species\/?op=getncastatuses",
+      "MandatoryVariables": [],
+      "OptionalVariables": [
+        "f"
+      ]
+    }
+  ],
+  "Varaibles": [
+    {
+      "Name": "f",
+      "Description": "Format - Setting the 'f' varaible will determine the format of the response.  There are 4 possible options; json, xml, kml and csv.  Json is the default if 'f' is not set.  If the output is spatial, GeoJson will be return for 'f=json' and KML will be returned for 'f=xml' or 'f=kml'."
+    },
+    {
+      "Name": "projids",
+      "Description": "Project Ids - Comma separated list of project ids."
+    },
+    {
+      "Name": "projtitle",
+      "Description": "Project Title - A title (full or partial) that is used as a search string to search for a project or projects."
+    },
+    {
+      "Name": "proj",
+      "Description": "Include Porject Details - This indicates if the project details are to be included in the output.  The default is true."
+    },
+    {
+      "Name": "org",
+      "Description": "Organisation ID - An ID that is associated with an organisation."
+    },
+    {
+      "Name": "bbox",
+      "Description": "Bounding Box - A bounding box that defines a geographical area.  Specified as top left, bottom right, e.g. lat,lng,lat,lng."
+    },
+    {
+      "Name": "circle",
+      "Description": "Circle - A circle (buffered point) that defines a geographical area.  Specifed as centre, radius(m), e.g. lat,lng,distance."
+    },
+    {
+      "Name": "pagecount",
+      "Description": "Page Count - The number of records to return on a page."
+    },
+    {
+      "Name": "pageindex",
+      "Description": "Page Index - The page index to return."
+    },
+    {
+      "Name": "p",
+      "Description": "Location Precision - The distance in metres that indicates the accuracy of the records location."
+    },
+    {
+      "Name": "min",
+      "Description": "Minimum Start Date - The earliest date for a record to be returned."
+    },
+    {
+      "Name": "max",
+      "Description": "Maximum Start Date - The latest date for a record to be returned."
+    },
+    {
+      "Name": "kingdom",
+      "Description": "Kingdom - A kingdoms common name."
+    },
+    {
+      "Name": "class",
+      "Description": "Class - A class scientific name."
+    },
+    {
+      "Name": "classes",
+      "Description": "Classes - A comma separated list of class scientific names."
+    },
+    {
+      "Name": "family",
+      "Description": "Family - A scientific family name."
+    },
+    {
+      "Name": "species",
+      "Description": "Species Name - A scientific species name."
+    },
+    {
+      "Name": "taxonid",
+      "Description": "Taxon ID - A unique id that identifies a particular species."
+    }
+  ]
+}

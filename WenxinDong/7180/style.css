@@ -1,0 +1,79 @@
+body {
+	margin: 2em;
+	font-family: 'Aboreto', cursive;
+}
+
+header, nav, section, aside, article, footer {
+	border: 2px solid rgb(167, 76, 11);
+	padding: 1em;
+}
+
+header {
+	background-color: rgb(163, 216, 38);
+}
+
+nav {
+	background-color: rgb(255, 198, 28);
+}
+
+section {
+	background-color: rgb(166, 252, 252);
+}
+
+article {
+	background-color: rgb(247, 197, 35);
+}
+
+footer {
+	background-color: rgb(220, 164, 244);
+}
+
+#page-menu ul, #page-menu li {
+	margin: 0;
+	padding: 0;
+}
+
+#page-menu ul {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#page-menu li {
+	list-style: none;
+	padding: 0.5em;
+}
+
+main {
+	display: flex;
+}
+
+#recent-posts {
+	width: 30%;
+}
+
+#blog-listing {
+	width: 70%;
+}
+
+#page-footer {
+	display: flex;
+}
+
+#page-footer section {
+	width: 50%;
+}
+
+.byline {
+	font-style: italic;
+}
+
+.more-link {
+	font-weight: bold;
+}
+
+img.mugshot {
+	float: right;
+	max-width: 25%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+}
