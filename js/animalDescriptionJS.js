@@ -259,6 +259,11 @@ loadRandomRecordsState = 1;
 function loadRandomRecords(classItem, familyItem, animalItem) {
     /* load 100 records for each species */
     // add records using key, value until 100 records
+    if (classItem && familyItem && animalItem) {
+        $('#textDescriptionHeader>h1').html(
+            'Class: ' + classItem + '<br/> Family: ' + familyItem + '<br/> Animal: ' + animalItem
+        );
+    }
     if (loadRandomRecordsState) {
         loadRandomRecordsState = 0;
         let keyIdAnimalDetails = Object.keys(id_animalDetails); // get keys of id_animalDetails
