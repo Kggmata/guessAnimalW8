@@ -146,8 +146,8 @@ button:active {
     border: 2px solid var(--hoverColor);
 }
 
-#dropDown > div :hover {
-    background-color: rgba(217, 255, 213, 0.5);
+#dropDown :hover {
+    background-color: rgba(217, 255, 213);
 }
 
 #dropDown > div:active {

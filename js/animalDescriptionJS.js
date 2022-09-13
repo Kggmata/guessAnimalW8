@@ -397,12 +397,12 @@ function searchInDataAndAdd(searchTerm) {
                 value.KingdomCommonName.match(regex)) &&
             $("#dropDown").children().length < recordNumber) {
             $('#dropDown').append(
-                $('<div>').text('TaxonID: ' + key).append(
-                    $('<div>').text('Name: ' + value.AcceptedCommonName.toUpperCase()),
-                    $('<div>').text('Class: ' + value.ClassCommonName.toUpperCase()),
-                    $('<div>').text('Family: ' + value.FamilyCommonName.toUpperCase()),
+                $('<div>').html('TaxonID: ' + key + '<br/>' +
+                    'Name: ' + value.AcceptedCommonName.toUpperCase() + '<br>' +
+                    'Class: ' + value.ClassCommonName.toUpperCase() + '<br>' +
+                    'Family: ' + value.FamilyCommonName.toUpperCase())
                     // $('<a>').attr("href", "#").addClass("record-link").text("Show in Gallery").data("taxonID", key).data("searchItem", value.AcceptedCommonName).click(flickr)
-                ).data("taxonID", key).data("searchItem", value.AcceptedCommonName).click(flickr),
+                    .data("taxonID", key).data("searchItem", value.AcceptedCommonName).click(flickr)
             )
         }
     })
@@ -458,7 +458,7 @@ function triggerFilterBox() {
         $('#dropDownHistory > div').css('z-index', '9999');
         $('#galleryHistory > div').css('z-index', '9999');
     })
-    $('#searchBoxRecordsDisplayed').text($('#dropDown > div').length);
+    $('#searchBoxRecordsDisplayed').text($('#dropDown > div').length - 1);
     let sortedSearchHistory = sortObject();
     if (Object.keys(searchHistory).length > searchHistoryNum) {
         delete searchHistory[sortedSearchHistory.pop()[0]];
