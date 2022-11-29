@@ -225,6 +225,7 @@ $(document).ready(function () {
     id_animalDetails = loadFromCache("id_animalDetails");
     searchHistory = loadFromCache("searchHistory");
     galleryHistory = loadFromCache("galleryHistory");
+
     if (!searchHistory) {
         searchHistory = {};
     }
@@ -458,7 +459,7 @@ function triggerFilterBox() {
     setTimeout(function () {
         $('#dropDown > div').css('opacity', 1);
         $('#dropDownHistory > div').css('opacity', 1);
-        $('#galleryHistory > div').css('opacity', 1);
+        $('#galleryHistory > div').css('opacity',    1);
         $('#dropDown').css('z-index', '9999');
         $('#dropDownHistory > div').css('z-index', '9999');
         $('#galleryHistory > div').css('z-index', '9999');
